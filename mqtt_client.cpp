@@ -1,5 +1,6 @@
 #include "mqtt_client.hpp"
 
+// Set the options for the client
 mqttClient::mqttClient(const std::string &id, const std::string &address,
   const std::string &username, const std::string &password)
   : client(address, id), opt(username, password)
@@ -9,6 +10,7 @@ mqttClient::mqttClient(const std::string &id, const std::string &address,
   opt.set_clean_session(true);
 }
 
+// Connect to the broker
 bool mqttClient::connect()
 {
   try {
@@ -25,6 +27,7 @@ bool mqttClient::connect()
   }
 }
 
+// Send a message to the broker
 void mqttClient::sendMessage(const std::string &topic, const std::string &payload) {
   mqtt::message_ptr msg = mqtt::make_message(topic, payload);
 
