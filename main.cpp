@@ -16,7 +16,7 @@ int main(int argc, char** argv)
     // TODO: Read data from sensors and replace the string below with the data struct toString funciton call
     // TODO(valentin): Handle exception if the connection is lost
     client.sendMessage(topic + CLIENT_ID,
-      "{ \"TIME\": \"2023-04-27T04:20:00Z\", \"CDOM\": 3, \"NITRATE\": 141, \"DISSOLVED_OXYGEN\": 59, \"PH\": 26, \"INDUCTION\": 535, \"FISH_DEPTH\": 8, \"PRESSURE\": 9, \"DEPTH\": 7 }");
+      "{ \"TIME\": \"2023-04-27T04:20:00Z\", \"CDOM\": 3, \"NITRATE\": 141, \"DISSOLVED_OXYGEN\": 59, \"PH\": 26, \"INDUCTION\": 535, \"FISH_DEPTH\": 8, \"PRESSURE\": 9, \"DEPTH\": 7, \"LAT\": 56.672, \"LONG\": 12.859 }");
     sleep(MSG_INTERVAL);
   }
   return 0;
